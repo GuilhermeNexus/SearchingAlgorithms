@@ -1,6 +1,9 @@
 list = Array[3,6,9,39,40,59,259,609,709]
 
-
+list.each do |i|
+print String(i) + " "
+end
+puts " "
 beginning_index = 0
 endind_index = (list.size) - 1
 search_value = list[rand(list.size-1)]
@@ -11,9 +14,6 @@ puts "Search Value: " + String(search_value)
 while beginning_index <= endind_index
 
 	mid_index = beginning_index + (endind_index - beginning_index / 2).floor
-  puts "Beginning_index: " + String(beginning_index)
-  puts "Ending_index: " + String(endind_index)
-  puts"-"
   mid_value = list[mid_index]
 	if mid_value == search_value
 		search_value_index = mid_index
